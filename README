@@ -1,2 +1,1 @@
-根据此文中提到的原理实现，吼吼，http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html 
-简单的实现，需要gd。
+用php简单的实现了下：http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html 需要gd。
