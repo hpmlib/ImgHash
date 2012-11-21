@@ -1,5 +1,5 @@
 <?php
-Function getImgHM($filename,$x=8,$y=8){
+function getImgHM($filename,$x=8,$y=8){
     list($width, $height) = getimagesize($filename);
     $new_width = $x;
     $new_height = $y;
@@ -29,12 +29,14 @@ Function getImgHM($filename,$x=8,$y=8){
     imagedestroy($image_p);
     RETURN $HM;
 }
-    function getP($image,$x,$y){
-        $Color_arr = imagecolorsforindex($image,imagecolorat($image,$x,$y));
-        $P = ($Color_arr["red"] + $Color_arr["blue"] + $Color_arr["green"])/3;
-        return $P;
-    }
-Function checkHM($search,$path){
+
+function getP($image,$x,$y){
+    $Color_arr = imagecolorsforindex($image,imagecolorat($image,$x,$y));
+    $P = ($Color_arr["red"] + $Color_arr["blue"] + $Color_arr["green"])/3;
+    return $P;
+}
+
+function checkHM($search,$path){
     $HM = getImgHM($search);
     $HM_2 = getImgHM($path);
     echo $search.':'.$HM.'<br>'.$path.':'.$HM_2.'<br>';
